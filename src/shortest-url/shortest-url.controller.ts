@@ -1,7 +1,9 @@
 import { Controller, Post, Body } from '@nestjs/common';
 import { ShortestUrlService } from './shortest-url.service';
 import { Auth } from 'src/auth/decorators';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('shortest-url')
 @Auth()
 @Controller('encode')
 export class ShortestUrlController {
