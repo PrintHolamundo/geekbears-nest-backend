@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  mongodb:
+    image: mongo:5.0
+    restart: always
+    environment:
+      MONGODB_DATABASE: geekbears
+    ports:
+      - "27017:27017"
+    mem_limit: 0
+    mem_reservation: 0
